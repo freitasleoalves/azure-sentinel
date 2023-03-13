@@ -11,7 +11,7 @@ Projeto em terraform que visa o provisionamento da infraestrutura necessaria par
 
 ## Uso/Exemplos
 
-O projeto esta segregado em duas versões. 
+O projeto esta segregado em duas versões.
 
 A v1 provisiona toda a infra necessaria para ativação do Sentinel.
 
@@ -41,7 +41,7 @@ C:.
     │   │   provider.tf
     │   │   README.md
     │   │   variables.tf
-    │   │   
+    │   │
     │   ├───config
     │   │       terraform.tfvars
     │   │
@@ -72,6 +72,6 @@ C:.
             ├───resource-groups
             ├───storage-account
             └───workspace
-  
+
 ```
 
