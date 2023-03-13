@@ -1,5 +1,5 @@
 ###############################################################################
-# Virtual Network 
+# Virtual Network
 ###############################################################################
 resource "azurerm_virtual_network" "vnet" {
   name                = "vnet-${var.prefix}-${var.suffix}"
@@ -9,7 +9,7 @@ resource "azurerm_virtual_network" "vnet" {
 }
 
 ###############################################################################
-# Subnets 
+# Subnets
 ###############################################################################
 resource "azurerm_subnet" "snet" {
   name                 = "snet-${var.prefix}-${var.suffix}"
@@ -20,7 +20,7 @@ resource "azurerm_subnet" "snet" {
 }
 
 ###############################################################################
-# Network Security Groups 
+# Network Security Groups
 ###############################################################################
 resource "azurerm_network_security_group" "nsg" {
   name                = "nsg-${var.prefix}-${var.suffix}"
@@ -29,7 +29,7 @@ resource "azurerm_network_security_group" "nsg" {
 }
 
 ###############################################################################
-# Route Tables 
+# Route Tables
 ###############################################################################
 # resource "azurerm_route_table" "rt" {
 #   name                          = "rt-${var.prefix}-${local.suffix}"
@@ -70,7 +70,7 @@ resource "azurerm_network_security_group" "nsg" {
 # }
 
 ###############################################################################
-# Network Associations 
+# Network Associations
 ###############################################################################
 # resource "azurerm_subnet_network_security_group_association" "default" {
 #   subnet_id                 = azurerm_subnet.snet.id

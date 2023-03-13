@@ -1,5 +1,5 @@
 ###############################################################################
-# Microsoft Sentinel 
+# Microsoft Sentinel
 ###############################################################################
 resource "azurerm_log_analytics_solution" "sentinel" {
   solution_name         = "SecurityInsights"
