@@ -4,7 +4,7 @@ resourcegroup = {
     "Application" : "Sentinel",
     "Department" : "Cloud",
     "Environment" : "prod",
-    "Owner" : "GetNet"
+    "Owner" : "leonardo"
   }
 }
 

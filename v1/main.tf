@@ -8,7 +8,7 @@ module "resource_groups" {
 }
 
 module "vnet" {
-  source                = "./modules/vnet_talvez"
+  source                = "./modules/vnet"
   location              = module.resource_groups.resource_group_location
   resource_group_name   = module.resource_groups.resource_group_name
   vnet_address_space    = var.vnet.vnet_address_space
