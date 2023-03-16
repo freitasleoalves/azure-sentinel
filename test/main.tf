@@ -9,7 +9,7 @@ module "resource_groups" {
 
 module "storage_account" {
   source              = "./modules/storage-account"
-  location            = module.resource_groups.resource_group_location
+  location            = var.rg_location
   resource_group_name = module.resource_groups.resource_group_name
   sa_names_standard   = var.sa_names_standard
   sa_names_premium    = var.sa_names_premium

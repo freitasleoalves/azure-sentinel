@@ -82,7 +82,7 @@ jobs:
         tokenPrefix: '{{'
         tokenSuffix: '}}'
         files: '["**/*.tf"]'
-          
+
     - name: Terraform Init
       run: terraform init
 
@@ -157,7 +157,7 @@ jobs:
         uses: cschleiden/replace-tokens@v1.2
         with:
           tokenPrefix: '{{'
-          tokenSuffix: '}}' 
+          tokenSuffix: '}}'
           files: '["**/*.tf"]'
 
       - name: Terraform Init
@@ -197,7 +197,7 @@ jobs:
   #       uses: cschleiden/replace-tokens@v1.2
   #       with:
   #         tokenPrefix: '{{'
-  #         tokenSuffix: '}}' 
+  #         tokenSuffix: '}}'
   #         files: '["**/*.tf"]'
 
   #     - name: Terraform Init

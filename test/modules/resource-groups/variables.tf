@@ -15,15 +15,15 @@ variable "tags" {
 }
 
 variable "env" {
-  type        = string
+  type = string
 }
 
 variable "suffix" {
-  type        = string
+  type = string
 }
 
 variable "prefix" {
-  type        = string
+  type = string
 }
 
 # variable "configrgs" {

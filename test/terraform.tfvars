@@ -17,13 +17,13 @@ tags = {
 }
 
 sa_names_map = {
-  {
-    name     = "map",
-    location = "brazilsouth"
-  },
-  {
-    name     = "map",
-    location = "brazilsouth"
+  "test1" = {
+    name                     = "mapexercise01",
+    account_replication_type = "ZRS"
+  }
+  "test2" = {
+    name                     = "mapexercise02",
+    account_replication_type = "LRS"
   }
 }
 

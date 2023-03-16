@@ -28,7 +28,7 @@ variable "sa_names_premium" {
 
 variable "sa_names_map" {
   type = map(object({
-    name              = string
-    location           = string
+    name                     = string
+    account_replication_type = string
   }))
 }

@@ -12,20 +12,20 @@
 # }
 
 resource "azurerm_storage_account" "log" {
-  for_each = toset(var.sa_names_standard)
-  name                     = "sagetnetlog${each.value}"
-  resource_group_name      = var.resource_group_name
-  location                 = var.location
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
-  min_tls_version          = "TLS1_2"
+  for_each                        = toset(var.sa_names_standard)
+  name                            = "sagetnetlog${each.value}"
+  resource_group_name             = var.resource_group_name
+  location                        = var.location
+  account_tier                    = "Standard"
+  account_replication_type        = "LRS"
+  min_tls_version                 = "TLS1_2"
   allow_nested_items_to_be_public = false
 
   tags = var.tags
 
   network_rules {
-    default_action             = "Deny"
-    bypass                     = ["AzureServices"]
+    default_action = "Deny"
+    bypass         = ["AzureServices"]
     # virtual_network_subnet_ids = [var.virtual_network_subnet_ids]
   }
 
@@ -43,20 +43,20 @@ resource "azurerm_storage_account" "log" {
 }
 
 resource "azurerm_storage_account" "premium" {
-  for_each = toset(var.sa_names_premium)
-  name                     = "sagetnetlog${each.value}"
-  resource_group_name      = var.resource_group_name
-  location                 = var.location
-  account_tier             = "Premium"
-  account_replication_type = "GRS"
-  min_tls_version          = "TLS1_2"
+  for_each                        = toset(var.sa_names_premium)
+  name                            = "sagetnetlog${each.value}"
+  resource_group_name             = var.resource_group_name
+  location                        = var.location
+  account_tier                    = "Premium"
+  account_replication_type        = "GRS"
+  min_tls_version                 = "TLS1_2"
   allow_nested_items_to_be_public = false
 
   tags = var.tags
 
   network_rules {
-    default_action             = "Deny"
-    bypass                     = ["AzureServices"]
+    default_action = "Deny"
+    bypass         = ["AzureServices"]
     # virtual_network_subnet_ids = [var.virtual_network_subnet_ids]
   }
 
@@ -74,20 +74,20 @@ resource "azurerm_storage_account" "premium" {
 }
 
 resource "azurerm_storage_account" "map" {
-  for_each = var.sa_names_map
-  name                     = "sagetnetlog${each.value.name}"
-  resource_group_name      = var.resource_group_name
-  location                 = each.value.location
-  account_tier             = "Premium"
-  account_replication_type = "ZRS"
-  min_tls_version          = "TLS1_2"
+  for_each                        = var.sa_names_map
+  name                            = "saprefix${each.value["name"]}"
+  resource_group_name             = var.resource_group_name
+  location                        = var.location
+  account_tier                    = "Premium"
+  account_replication_type        = each.value["account_replication_type"]
+  min_tls_version                 = "TLS1_2"
   allow_nested_items_to_be_public = false
 
   tags = var.tags
 
   network_rules {
-    default_action             = "Deny"
-    bypass                     = ["AzureServices"]
+    default_action = "Deny"
+    bypass         = ["AzureServices"]
     # virtual_network_subnet_ids = [var.virtual_network_subnet_ids]
   }
 
